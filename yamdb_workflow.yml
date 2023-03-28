@@ -41,6 +41,9 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
+          tags: lilcorgo/api_yamdb:latest
+          context: api_yamdb
+          dockerfile: Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
