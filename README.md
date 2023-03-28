@@ -51,7 +51,7 @@ docker-compose exec web python manage.py collectstatic --no-input
 ```
 
 ### Статус workflow
-![Status of api_yamdb project workflow](https://github.com/Sergey-K2/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?event=push)
+![example workflow](https://github.com/lilcorgo/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 ### Документация
 ```
@@ -60,14 +60,14 @@ http://127.0.0.1/redoc/
 
 ### Пример заполнения .env
 ```
-Какая БД:
+БД:
 DB_ENGINE=django.db.backends.postgresql
 Имя БД:
-DB_NAME= "your name"
-Юзернейм БД
-POSTGRES_USER= "your username"
+DB_NAME= 
+Логин БД
+POSTGRES_USER= 
 Пароль БД:
-POSTGRES_PASSWORD= "your password"
+POSTGRES_PASSWORD= 
 Local host:
 DB_HOST=127.0.0.1
 Порт БД:
@@ -76,5 +76,5 @@ DB_PORT=5432
 
 ### Проект доступен по адресу
 ```
-http://158.160.34.227/admin/login/?next=/admin/
+http://158.160.11.104/admin/login/?next=/admin/
 ```
