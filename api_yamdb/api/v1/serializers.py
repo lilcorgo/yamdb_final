@@ -1,10 +1,8 @@
 from django.contrib.auth import get_user_model
 from django.shortcuts import get_object_or_404
 from rest_framework import serializers
-
+from reviews.models import Category, Comment, Genre, Review, Title
 from users.validators import username_validation
-from reviews.models import Title, Category, Genre, Review, Comment
-
 
 User = get_user_model()
 
