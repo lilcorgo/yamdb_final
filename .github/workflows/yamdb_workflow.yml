@@ -41,7 +41,7 @@ jobs:
           with:
             context: api_yamdb
             push: true
-            tags: ${{ secrets.USER }}/yamdb_api:latest
+            tags: ${{ secrets.DOCKER_USERNAME }}/api_yamdb:latest
 
   deploy:
     runs-on: ubuntu-latest
@@ -55,9 +55,10 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo systemctl stop nginx 
+            sudo docker pull lilcorgo/api_yamdb:latest
             sudo docker-compose stop
-            sudo docker-compose rm web
+            sudo docker-compose rm -f web
+            rm .env
             touch .env
             echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
