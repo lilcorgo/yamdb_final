@@ -66,9 +66,6 @@ jobs:
               echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
               echo DB_HOST=${{ secrets.DB_HOST }} >> .env
               echo DB_PORT=${{ secrets.DB_PORT }} >> .env
-              echo MAILCATCHER_SMTP_PORT=${{ secrets.MAILCATCHER_SMTP_PORT }} >> .env
-              echo MAILCATCHER_HTTP_PORT=${{ secrets.MAILCATCHER_HTTP_PORT }} >> .env
-              echo COMPOSE_PROJECT_NAME=${{ secrets.COMPOSE_PROJECT_NAME }} >> .env
               sudo docker-compose up -d
   send_message:
     runs-on: ubuntu-latest
